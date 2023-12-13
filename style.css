@@ -1,9 +1,46 @@
+/* ######  custom-props ####  */
+
+/*  PALETTE */
+
+:root {
+  --navbar-bg-color: rgb(0, 0, 0);
+  --body-bg-color: rgb(20, 25, 34);
+  --player-bg-color: rgb(29, 29, 29);
+  --text-primary-color: white;
+
+  /* LAYOUT */
+
+  --player-height: 120px;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "montserrat", sans-serif;
 }
 
-custom-props {
+body {
+  font-family: "montserrat", sans-serif;
+  background-color: var(--body-bg-color);
+  color: var(--text-primary-color);
+}
+
+/* ##### APP TOP */
+
+#app-top {
+  height: calc(100vh - var(--player-height));
+  display: flex;
+}
+
+/* ##### APP NAVBAR */
+#nav-bar {
+  width: 300px;
+  background-color: var(--navbar-bg-color);
+}
+
+/* ##### APP PLAYER */
+
+#app-player {
+  height: var(--player-height);
+  background-color: var(--player-bg-color);
 }
