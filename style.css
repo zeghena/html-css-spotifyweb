@@ -82,6 +82,32 @@ a {
 }
 
 /* #######  MAIN CONTENT ###### */
+.list {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+h2 {
+  text-align: left;
+  padding: 20px;
+}
+
+#box-card {
+  display: flex;
+}
+.box {
+  display: flex;
+}
+.card {
+  width: 200px;
+  height: 250px;
+  text-align: center;
+  padding: 20px;
+  line-height: 2;
+}
+img {
+  width: 100%;
+}
 
 /* ##### APP PLAYER */
 
