@@ -25,6 +25,19 @@ body {
   font-family: "montserrat", sans-serif;
   background-color: var(--body-bg-color);
   color: var(--text-primary-color);
+  list-style: none;
+}
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* ##### APP TOP */
@@ -52,7 +65,23 @@ body {
   position: sticky;
   top: 0;
   right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
 }
+
+.btn {
+  padding: 10px;
+  background-color: var(--navbar-bg-color);
+  border: 1px solid #c9cacb;
+  border-radius: 12px;
+  color: #c9cacb;
+  right: 10px;
+  top: 10px;
+}
+
+/* #######  MAIN CONTENT ###### */
 
 /* ##### APP PLAYER */
 
