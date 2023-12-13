@@ -11,6 +11,8 @@
   /* LAYOUT */
 
   --player-height: 120px;
+  --app-navbar-width: 50px;
+  --app-navbar-expanded: 300px;
 }
 
 * {
@@ -33,9 +35,23 @@ body {
 }
 
 /* ##### APP NAVBAR */
-#nav-bar {
-  width: 300px;
+#app-nav-bar {
+  width: var(--app-navbar-width);
   background-color: var(--navbar-bg-color);
+  flex-shrink: 0;
+}
+/* ##### APP MAIN */
+#app-main {
+  flex-grow: 1;
+  height: 100%;
+  overflow: auto;
+}
+#main-top-bar {
+  height: 120px;
+  background-color: rgb(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  right: 0;
 }
 
 /* ##### APP PLAYER */
@@ -43,4 +59,21 @@ body {
 #app-player {
   height: var(--player-height);
   background-color: var(--player-bg-color);
+}
+
+/* ##### MEDIA QUERY TABLET #####  */
+
+@media screen and (min-width: 768px) {
+  #app-nav-bar {
+    width: var(--app-navbar-expanded);
+  }
+}
+/* ##### MEDIA QUERY desktop 1440 #####  */
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: red;
+  }
+  #app-nav-bar {
+    width: var(--app-navbar-expanded);
+  }
 }
