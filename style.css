@@ -99,10 +99,6 @@ a {
   margin: 6px;
 }
 
-/* .box-logo-home {
-  width: 30px;
-  margin: 20px;
-} */
 /* ##### APP MAIN */
 
 /* ##### APP MAIN CONTENT */
@@ -153,6 +149,7 @@ h5 {
 
 #box-card {
   display: flex;
+  flex-wrap: wrap;
 }
 .box {
   display: flex;
@@ -178,9 +175,9 @@ img {
 /* ##### MEDIA QUERY SMALL MOBILE #####  */
 
 @media screen and (min-width: 576px) {
-  /* #app-nav-bar .logo {
+  #app-nav-bar .logo {
     display: none;
-  } */
+  }
 }
 /* ##### MEDIA QUERY  -MD- tablet  768 #####  */
 
@@ -193,7 +190,7 @@ img {
 
   /* **** Utils***** */
   .d-none-md {
-    display: block;
+    display: none;
   }
 
   .d-block-md {
