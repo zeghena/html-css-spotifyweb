@@ -1,173 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Fuggles&family=Montserrat:wght@300;400;600&family=Reenie+Beanie&family=Roboto:wght@300;400&family=Rubik+Microbe&display=swap"
-        rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Fuggles&family=Montserrat:wght@300;400;600&family=Reenie+Beanie&family=Roboto:wght@300;400&family=Rubik+Microbe&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<body>
+  <body>
     <div id="app-top">
+      <!-- ##### NAV-BAR #####  -->
 
-        <!-- ##### NAV-BAR #####  -->
+      <nav id="app-nav-bar">
+        <!-- spotify logo e scritta -->
 
-        <nav id="app-nav-bar">
+        <div class="navbar-item">
+          <img
+            src="./style/img/logo-small.svg"
+            class="d-block d-none-md"
+            alt=""
+          />
+          <img src="./style/img/logo.svg" class="d-none d-block-md" alt="" />
+        </div>
+        <div class="navbar-item">
+          <ul>
+            <li>
+              <a href="#"><span class="navbar-text-link">Home</span></a>
+            </li>
+            <li>
+              <a href="#"><span class="navbar-text-link">Cerca</span></a>
+            </li>
+            <li>
+              <a href="#"
+                ><span class="navbar-text-link">La tua libreria</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-item"></div>
+        <div class="navbar-item"></div>
 
-
-
-            <!-- spotify logo e scritta -->
-
-
-
-            <div>
+        <!-- <div>
                 <div class="box-logo">
                     <img src="./style/img/logo.svg" alt="">
                 </div>
 
-            </div>
-        </nav>
+            </div> -->
 
+        <!-- spotify HOME -->
 
-        <main id="app-main">
-            <div id="main-top-bar">
-                <button class="btn">EFFETTUA L'UPGRADE</button>
-            </div>
-            <div id="main-content">
-                <div class="list">
-                    <ul>
-                        <li><a href="#">IN EVIDENZA</a></li>
-                        <li><a href="#">PODCAST</a></li>
-                        <li><a href="#">CLASSIFICA</a></li>
-                        <li><a href="#">GENERI E MOOD</a></li>
-                        <li><a href="#">NUOVE USCITE</a></li>
-                        <li><a href="#">SCOPRI</a></li>
-
-                    </ul>
+        <!-- <div>
+                <div class="box-logo-home">
+                    <img src="./style/img/home.svg" alt="">
                 </div>
+                Home
 
-                <!-- ######  MAIN ######  -->
+            </div> -->
+      </nav>
 
-                <h2>Recently Played</h2>
+      <!-- END NAV BAR -->
 
-                <div id="box-card">
+      <!-- MAIN  -->
 
-                    <div class="box">
-                        <div class="card">
-                            <img src="./style/img/metal_lifting.jpg" alt="">
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
+      <main id="app-main">
+        <div id="main-top-bar">
+          <button class="btn">EFFETTUA L'UPGRADE</button>
+        </div>
+        <div id="main-content">
+          <div class="list">
+            <ul>
+              <li><a href="#">IN EVIDENZA</a></li>
+              <li><a href="#">PODCAST</a></li>
+              <li><a href="#">CLASSIFICA</a></li>
+              <li><a href="#">GENERI E MOOD</a></li>
+              <li><a href="#">NUOVE USCITE</a></li>
+              <li><a href="#">SCOPRI</a></li>
+            </ul>
+          </div>
 
-                        </div>
+          <!-- ######  MAIN ######  -->
 
-                        <div class="card">
-                            <img src="./style/img/stranger.jpeg" alt="">
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
+          <h2>Recently Played</h2>
 
-                        </div>
+          <div id="box-card">
+            <div class="box">
+              <div class="card">
+                <img src="./style/img/metal_lifting.jpg" alt="" />
+                <h3>Heavy Metal</h3>
+                <h5>Subtitle</h5>
+              </div>
 
-                    </div>
-
-                    <div class="box">
-                        <div class="card">
-                            <img src="./style/img/aquietplace.jpeg" alt="">
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
-
-                        </div>
-
-                        <div class="card">
-                            <img src="./style/img/cure.jpeg" alt="">
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
-
-                        </div>
-                    </div>
-
-                    <div class="box">
-
-                        <div class="card">
-                            <img src="./style/img/split.jpeg" alt="">
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
-
-                        </div>
-
-                        <div class="card">
-                            <img src="./style/img/sinister.jpeg" alt="">
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
-
-                        </div>
-                    </div>
-                </div>
-
-
-
+              <div class="card">
+                <img src="./style/img/stranger.jpeg" alt="" />
+                <h3>Heavy Metal</h3>
+                <h5>Subtitle</h5>
+              </div>
             </div>
 
-            <!-- ##### creato per john Doe #####  -->
+            <div class="box">
+              <div class="card">
+                <img src="./style/img/aquietplace.jpeg" alt="" />
+                <h3>Heavy Metal</h3>
+                <h5>Subtitle</h5>
+              </div>
 
-            <h2 class="title">Creato per John Doe</h2>
-            <h4>Più ascolti, più accurati saranno i suggerimenti</h4>
-
-            <div id="box-card">
-
-                <div class="box">
-                    <div class="card">
-                        <img src="./style/img/metal_lifting.jpg" alt="">
-                        <h3>Heavy Metal</h3>
-                        <h5>Subtitle</h5>
-
-                    </div>
-
-                    <div class="card">
-                        <img src="./style/img/stranger.jpeg" alt="">
-                        <h3>Heavy Metal</h3>
-                        <h5>Subtitle</h5>
-
-                    </div>
-
-                </div>
+              <div class="card">
+                <img src="./style/img/cure.jpeg" alt="" />
+                <h3>Heavy Metal</h3>
+                <h5>Subtitle</h5>
+              </div>
             </div>
 
-            <!-- ##### artisti più popolari #####  -->
+            <div class="box">
+              <div class="card">
+                <img src="./style/img/split.jpeg" alt="" />
+                <h3>Heavy Metal</h3>
+                <h5>Subtitle</h5>
+              </div>
 
-            <div id="box-card">
-
-                <div class="box">
-                    <div class="card">
-                        <img src="./style/img/metal_lifting.jpg" alt="">
-                        <h3>Heavy Metal</h3>
-                        <h5>Subtitle</h5>
-
-                    </div>
-
-                    <div class="card">
-                        <img src="./style/img/stranger.jpeg" alt="">
-                        <h3>Heavy Metal</h3>
-                        <h5>Subtitle</h5>
-
-                    </div>
-
-                </div>
+              <div class="card">
+                <img src="./style/img/sinister.jpeg" alt="" />
+                <h3>Heavy Metal</h3>
+                <h5>Subtitle</h5>
+              </div>
             </div>
-        </main>
+          </div>
+        </div>
+
+        <!-- ##### creato per john Doe #####  -->
+
+        <h2 class="title">Creato per John Doe</h2>
+        <h4>Più ascolti, più accurati saranno i suggerimenti</h4>
+
+        <div id="box-card">
+          <div class="box">
+            <div class="card">
+              <img src="./style/img/metal_lifting.jpg" alt="" />
+              <h3>Heavy Metal</h3>
+              <h5>Subtitle</h5>
+            </div>
+
+            <div class="card">
+              <img src="./style/img/stranger.jpeg" alt="" />
+              <h3>Heavy Metal</h3>
+              <h5>Subtitle</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- ##### artisti più popolari #####  -->
+
+        <div id="box-card">
+          <div class="box">
+            <div class="card">
+              <img src="./style/img/metal_lifting.jpg" alt="" />
+              <h3>Heavy Metal</h3>
+              <h5>Subtitle</h5>
+            </div>
+
+            <div class="card">
+              <img src="./style/img/stranger.jpeg" alt="" />
+              <h3>Heavy Metal</h3>
+              <h5>Subtitle</h5>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
 
-
-
-
     <footer id="app-player"></footer>
-
-</body>
-
+  </body>
 </html>
