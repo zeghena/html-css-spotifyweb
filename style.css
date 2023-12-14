@@ -56,6 +56,13 @@ a {
   background-color: var(--navbar-bg-color);
   flex-shrink: 0;
 }
+
+.box-logo {
+  width: 150px;
+
+  margin: 20px;
+  color: var(--text-primary-color);
+}
 /* ##### APP MAIN */
 #app-main {
   flex-grow: 1;
