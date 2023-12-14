@@ -7,12 +7,13 @@
   --body-bg-color: rgb(20, 25, 34);
   --player-bg-color: rgb(29, 29, 29);
   --text-primary-color: white;
+  --text-secondary-color: rgb(123, 125, 130);
 
   /* LAYOUT */
 
   --player-height: 120px;
   --app-navbar-width: 50px;
-  --app-navbar-expanded: 300px;
+  --app-navbar-expanded: 200px;
 }
 
 * {
@@ -33,6 +34,8 @@ ul {
 
 li {
   display: inline-block;
+  font-size: small;
+  padding: 10px;
 }
 
 a {
@@ -90,6 +93,13 @@ a {
 h2 {
   text-align: left;
   padding: 20px;
+}
+h4 {
+  text-align: left;
+  padding: 20px;
+}
+h5 {
+  color: var(--text-secondary-color);
 }
 
 #box-card {
