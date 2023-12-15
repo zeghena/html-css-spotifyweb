@@ -60,12 +60,6 @@ ul {
   list-style: none;
 }
 
-li {
-  display: inline-block;
-  font-size: small;
-  padding: 10px;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -79,7 +73,7 @@ a {
 }
 
 /* ##### APP NAVBAR */
-#app-nav-bar {
+#app-navbar {
   width: var(--app-navbar-width);
   background-color: var(--navbar-bg-color);
   flex-shrink: 0;
@@ -87,19 +81,61 @@ a {
   flex-direction: column;
 }
 
-#app-nav-bar :last-child {
+#app-navbar :last-child {
   margin-top: auto;
 }
 
-#app-nav-bar .logo {
+#app-navbar .logo {
+  display: none;
+}
+
+#app-navbar .logo {
   display: none;
 }
 
 .navbar-item {
-  margin: 6px;
+  text-align: center;
+  width: 100%;
+  margin: 10px;
 }
 
+#app-navbar .navbar-img-link,
+#app-navbar .logo-small {
+  width: 30px;
+  text-align: center;
+}
+
+#app-navbar .navbar-text-link {
+  display: none;
+}
+
+#app-navbar .navbar-item li {
+  display: block;
+  left: 0;
+}
+
+.add-playlist {
+  padding: 10px;
+  width: 20%;
+}
+.list-playlist {
+  line-height: 2;
+}
+.navbar-item .playlist {
+  display: none;
+}
+
+/* .navbar-item .playlist {
+  display: none;
+} */
+
 /* ##### APP MAIN */
+
+.main-list {
+  display: inline-block;
+  font-size: small;
+  padding: 10px;
+}
 
 /* ##### APP MAIN CONTENT */
 #app-main {
@@ -175,7 +211,7 @@ img {
 /* ##### MEDIA QUERY SMALL MOBILE #####  */
 
 @media screen and (min-width: 576px) {
-  #app-nav-bar .logo {
+  #app-navbar .logo {
     display: none;
   }
 }
@@ -184,7 +220,7 @@ img {
 /* **** custom props***** */
 
 @media screen and (min-width: 768px) {
-  #app-nav-bar {
+  #app-navbar {
     width: var(--app-navbar-expanded);
   }
 
@@ -198,11 +234,31 @@ img {
   }
 
   /* **** Navbar***** */
-  #app-nav-bar .logo {
+  #app-navbar .logo {
     display: block;
   }
-  #app-nav-bar .logo-small {
+  #app-navbar .logo-small {
     display: none;
+  }
+
+  #app-navbar .logo.box,
+  #app-navbar .navbar-item .playlist {
+    display: block;
+  }
+   {
+    display: block;
+  }
+  #app-navbar .navbar-img-link,
+  .navbar-text-link {
+    display: block;
+  }
+
+  #app-navbar .navbar-text-link {
+    display: inline;
+  }
+
+  .navbar-item .playlist {
+    display: block;
   }
 }
 

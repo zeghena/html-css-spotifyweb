@@ -18,27 +18,51 @@
     <div id="app-top">
         <!-- ##### NAV-BAR #####  -->
 
-        <nav id="app-nav-bar">
+        <nav id="app-navbar">
             <!-- spotify logo e scritta -->
 
             <div class="navbar-item">
-                <img src="./style/img/logo-small.svg" class="d-block d-none-md" alt="" />
-                <img src="./style/img/logo.svg" class="d-none d-block-md" alt="" />
+                <img src="./style/img/logo-small.svg" class="logo-small" alt="" />
+                <img src="./style/img/logo.svg" class="logo" alt="" />
             </div>
             <div class="navbar-item">
                 <ul>
                     <li>
-                        <a href="#">icon<span class="navbar-text-link">Home</span></a>
+                        <a href="#" class="navbar-link">
+                            <img src="./style/img/home.svg" class="navbar-img-link" alt="">
+                            <span class="navbar-text-link">Home</span></a>
                     </li>
+
                     <li>
-                        <a href="#"><span class="navbar-text-link">Cerca</span></a>
+                        <a href="#" class="navbar-link">
+                            <img src="./style/img/search.svg" class="navbar-img-link" alt="">
+                            <span class="navbar-text-link">Cerca</span></a>
                     </li>
+
                     <li>
-                        <a href="#"><span class="navbar-text-link">La tua libreria</span></a>
+                        <a href="#" class="navbar-link">
+                            <img src="./style/img/libreria.svg" class="navbar-img-link" alt="">
+                            <span class="navbar-text-link">La tua libreria</span></a>
                     </li>
                 </ul>
             </div>
-            <div class="navbar-item"></div>
+            <div class="navbar-item playlist">
+                <h3>playlist</h3>
+                <div>
+                    <button class="add-playlist">
+                        +
+                    </button>
+                    <span>Crea Playlist</span>
+                </div>
+
+
+                <ul class="list-playlist">
+                    <li>playlist</li>
+                    <li>playlist</li>
+                    <li>playlist</li>
+                    <li>playlist</li>
+                </ul>
+            </div>
             <div class="navbar-item"></div>
 
             <!-- <div>
@@ -70,12 +94,12 @@
             <div id="main-content">
                 <div class="list">
                     <ul>
-                        <li><a href="#">IN EVIDENZA</a></li>
-                        <li><a href="#">PODCAST</a></li>
-                        <li><a href="#">CLASSIFICA</a></li>
-                        <li><a href="#">GENERI E MOOD</a></li>
-                        <li><a href="#">NUOVE USCITE</a></li>
-                        <li><a href="#">SCOPRI</a></li>
+                        <li class="main-list"><a href="#">IN EVIDENZA</a></li>
+                        <li class="main-list"><a href="#">PODCAST</a></li>
+                        <li class="main-list"><a href="#">CLASSIFICA</a></li>
+                        <li class="main-list"><a href="#">GENERI E MOOD</a></li>
+                        <li class="main-list"><a href="#">NUOVE USCITE</a></li>
+                        <li class="main-list"><a href="#">SCOPRI</a></li>
                     </ul>
                 </div>
 
