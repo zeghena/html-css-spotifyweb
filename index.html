@@ -1,202 +1,535 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
+
+    <!-- caracters and viewport tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Fuggles&family=Montserrat:wght@300;400;600&family=Reenie+Beanie&family=Roboto:wght@300;400&family=Rubik+Microbe&display=swap"
-        rel="stylesheet" />
 
+    <!-- SEO tags -->
+    <meta name="author" content="Serena Malusà" />
+    <meta name="description" content="exercize about spotify web-app" />
+
+    <!-- title and icon -->
+    <title>Spotify Web</title>
+    <link rel="icon" href="./img/logo-small.ico" />
+
+    <!-- css links -->
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <!-- font awsome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- page stylesheets -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+
 </head>
 
 <body>
-    <div id="app-top">
-        <!-- ##### NAV-BAR #####  -->
+    <!-- top part of the app, display flex -->
+    <div class="overf-hidden d-flex" id="app__top">
 
-        <nav id="app-navbar">
-            <!-- spotify logo e scritta -->
+        <!-- SIDEBAR -->
+        <nav class="d-flex" id="app__sidebar">
 
-            <div class="navbar-item">
-                <img src="./style/img/logo-small.svg" class="logo-small" alt="" />
-                <img src="./style/img/logo.svg" class="logo" alt="" />
-            </div>
-            <div class="navbar-item">
-                <ul>
-                    <li>
-                        <a href="#" class="navbar-link">
-                            <img src="./style/img/home.svg" class="navbar-img-link" alt="">
-                            <span class="navbar-text-link">Home</span></a>
+            <!-- LOGO -->
+            <a href="#" class="sidebar__cnt xs-display-n" id="app__logo">
+                <img src="./img/logo.svg" alt="spotify logo and name">
+            </a>
+            <!-- LOGO SMALL FOR XS SCREENS -->
+            <a href="#" class="sidebar__cnt xs-display-b" id="app__logo-xs">
+                <img src="./img/logo-small.svg" alt="spotify logo">
+            </a>
+            <!-- END LOGO -->
+
+            <!-- APP NAVBAR -->
+            <nav class="sidebar__cnt" id="app__nav">
+                <ul class="list ver-nav__list">
+                    <li class="ver-nav__li">
+                        <a href="#" class="link active ver-nav__link d-flex">
+                            <img class="link__icon" src="./img/home.svg" alt="home icon" />
+                            <span class="link__text xs-display-n">Home</span>
+                        </a>
                     </li>
 
-                    <li>
-                        <a href="#" class="navbar-link">
-                            <img src="./style/img/search.svg" class="navbar-img-link" alt="">
-                            <span class="navbar-text-link">Cerca</span></a>
+                    <li class="ver-nav__li">
+                        <a href="#" class="link ver-nav__link d-flex">
+                            <img class="link__icon" src="./img/search.svg" alt="search icon" />
+                            <span class="link__text xs-display-n">Cerca</span>
+                        </a>
                     </li>
 
-                    <li>
-                        <a href="#" class="navbar-link">
-                            <img src="./style/img/libreria.svg" class="navbar-img-link" alt="">
-                            <span class="navbar-text-link">La tua libreria</span></a>
+                    <li class="ver-nav__li">
+                        <a href="#" class="link ver-nav__link d-flex">
+                            <img class="link__icon" src="./img/libreria.svg" alt="library icon" />
+                            <span class="link__text xs-display-n">Libreria</span>
+                        </a>
                     </li>
+
                 </ul>
-            </div>
-            <div class="navbar-item playlist">
-                <h3>playlist</h3>
-                <div>
-                    <button class="add-playlist">
-                        +
-                    </button>
-                    <span>Crea Playlist</span>
-                </div>
+            </nav>
+            <!-- END APP NAVBAR -->
 
+            <!-- PLAYLIST NAVBAR -->
+            <!-- contenitore che nasconde overflow -->
+            <div class="sidebar__cnt overf-hidden xs-display-n">
+                <nav id="playlist__nav">
+                    <h3 class="nav__title">Playlist</h3>
+                    <a href="#" class="link d-flex">
+                        <div class="link__icon" id="add-playlist">
+                            +
+                        </div>
+                        <span class="link__text xs-display-n">Crea Playlist</span>
+                    </a>
+                    <ul class="ver-nav__list">
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
 
-                <ul class="list-playlist">
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                    <li>playlist</li>
-                </ul>
-            </div>
-            <div class="navbar-item"></div>
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
 
-            <!-- <div>
-                <div class="box-logo">
-                    <img src="./style/img/logo.svg" alt="">
-                </div>
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
 
-            </div> -->
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
 
-            <!-- spotify HOME -->
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
 
-            <!-- <div>
-                <div class="box-logo-home">
-                    <img src="./style/img/home.svg" alt="">
-                </div>
-                Home
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
 
-            </div> -->
-        </nav>
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
 
-        <!-- END NAV BAR -->
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
 
-        <!-- MAIN  -->
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
 
-        <main id="app-main">
-            <div id="main-top-bar">
-                <button class="btn">EFFETTUA L'UPGRADE</button>
-            </div>
-            <div id="main-content">
-                <div class="list">
-                    <ul>
-                        <li class="main-list"><a href="#">IN EVIDENZA</a></li>
-                        <li class="main-list"><a href="#">PODCAST</a></li>
-                        <li class="main-list"><a href="#">CLASSIFICA</a></li>
-                        <li class="main-list"><a href="#">GENERI E MOOD</a></li>
-                        <li class="main-list"><a href="#">NUOVE USCITE</a></li>
-                        <li class="main-list"><a href="#">SCOPRI</a></li>
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
+
+                        <li class="ver-nav__li">
+                            <a href="#" class="link ver-nav__link">Nome Playlist</a>
+                        </li>
                     </ul>
-                </div>
-
-                <!-- ######  MAIN ######  -->
-
-                <h2>Recently Played</h2>
-
-                <div id="box-card">
-                    <div class="box">
-                        <div class="card">
-                            <img src="./style/img/metal_lifting.jpg" alt="" />
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
-                        </div>
-
-                        <div class="card">
-                            <img src="./style/img/stranger.jpeg" alt="" />
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
-                        </div>
-                    </div>
-
-                    <div class="box">
-                        <div class="card">
-                            <img src="./style/img/aquietplace.jpeg" alt="" />
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
-                        </div>
-
-                        <div class="card">
-                            <img src="./style/img/cure.jpeg" alt="" />
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
-                        </div>
-                    </div>
-
-                    <div class="box">
-                        <div class="card">
-                            <img src="./style/img/split.jpeg" alt="" />
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
-                        </div>
-
-                        <div class="card">
-                            <img src="./style/img/sinister.jpeg" alt="" />
-                            <h3>Heavy Metal</h3>
-                            <h5>Subtitle</h5>
-                        </div>
-                    </div>
-                </div>
+                </nav>
             </div>
+            <!-- END PLAYLIST NAVBAR -->
 
-            <!-- ##### creato per john Doe #####  -->
-
-            <h2 class="title">Creato per John Doe</h2>
-            <h4>Più ascolti, più accurati saranno i suggerimenti</h4>
-
-            <div id="box-card">
-                <div class="box">
-                    <div class="card">
-                        <img src="./style/img/metal_lifting.jpg" alt="" />
-                        <h3>Heavy Metal</h3>
-                        <h5>Subtitle</h5>
+            <!-- USER INFO -->
+            <div class="sidebar__cnt" id="user-info">
+                <a class="link download user-info__element d-flex" href="#">
+                    <div class="icon btn btn-round download__btn">
+                        <i class="fa-solid fa-arrow-down"></i>
                     </div>
+                    <span class="download__text xs-display-n">Installa app</span>
+                </a>
 
-                    <div class="card">
-                        <img src="./style/img/stranger.jpeg" alt="" />
-                        <h3>Heavy Metal</h3>
-                        <h5>Subtitle</h5>
+                <hr class="user-info__divider user-info__element">
+
+                <a class="link user user-info__element d-flex" href="#">
+                    <div class="icon img-round">
+                        <img class="user__img" src="./img/profile.svg" alt="user image">
                     </div>
-                </div>
+                    <span class="user__name xs-display-n">John Doe</span>
+                </a>
+
             </div>
+            <!-- END USER INFO -->
 
-            <!-- ##### artisti più popolari #####  -->
+        </nav>
+        <!-- END SIDEBAR -->
 
-            <div id="box-card">
-                <div class="box">
-                    <div class="card">
-                        <img src="./style/img/metal_lifting.jpg" alt="" />
-                        <h3>Heavy Metal</h3>
-                        <h5>Subtitle</h5>
+        <!-- MAIN -->
+        <main id="app__main">
+
+            <!-- HEADER -->
+            <header id="main__header">
+                <a href="#" class="link btn">Effettua l'upgrade</a>
+            </header>
+            <!-- END HEADER -->
+
+            <!-- MAIN BODY -->
+            <div id="main__body">
+
+                <!-- main navbar -->
+                <nav class="main__cnt" id="main__nav">
+
+                    <ul class="list hor-nav__list">
+                        <li class="hor-nav__li">
+                            <a href="" class="link active hor-nav__link">In evidenza</a>
+                        </li>
+
+                        <li class="hor-nav__li">
+                            <a href="" class="link hor-nav__link">Podcats</a>
+                        </li>
+
+                        <li class="hor-nav__li">
+                            <a href="" class="link hor-nav__link">Classifiche</a>
+                        </li>
+
+                        <li class="hor-nav__li">
+                            <a href="" class="link hor-nav__link">Generi e Mood</a>
+                        </li>
+
+                        <li class="hor-nav__li">
+                            <a href="" class="link hor-nav__link">Nuove uscite</a>
+                        </li>
+
+                        <li class="hor-nav__li">
+                            <a href="" class="link hor-nav__link">Scopri</a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- end main navbar -->
+
+                <!-- recently played -->
+                <section class="main__cnt" id="recently-played">
+                    <!-- grid container -->
+                    <div class="container">
+                        <h2 class="section__title">Recently played</h2>
+                        <!-- grid row -->
+                        <div class="row">
+
+                            <div class="col">
+                                <div class="card">
+                                    <figure class="card__element">
+                                        <img class="song__img" src="./img/metal_lifting.jpg" alt="album cover">
+                                        <div class="card__play-bg hover-show"></div>
+                                        <div class="card__play hover-show">
+                                            <i class="play__btn fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </figure>
+                                    <h3 class="card__element song__author">Heavy Metal</h3>
+                                    <span class="card__element song__title">Subtitle</span>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <figure class="card__element">
+                                        <img class="card__element song__img" src="./img/stranger.jpeg"
+                                            alt="album cover">
+                                        <div class="card__play-bg hover-show"></div>
+                                        <div class="card__play hover-show">
+                                            <i class="play__btn fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </figure>
+                                    <h3 class="card__element song__author">Stranger Things, Vol. 1 (a Netflix Original
+                                        Series Soundtrack)</h3>
+                                    <span class="card__element song__title">Kyle Dixson & Michael Stein</span>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <figure class="card__element">
+                                        <img class="card__element song__img" src="./img/aquietplace.jpeg"
+                                            alt="album cover">
+                                        <div class="card__play-bg hover-show"></div>
+                                        <div class="card__play hover-show">
+                                            <i class="play__btn fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </figure>
+                                    <h3 class="card__element song__author">A quiet place</h3>
+                                    <span class="card__element song__title">Subtitle</span>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <figure class="card__element">
+                                        <img class="card__element song__img" src="./img/split.jpeg" alt="album cover">
+                                        <div class="card__play-bg hover-show"></div>
+                                        <div class="card__play hover-show">
+                                            <i class="play__btn fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </figure>
+                                    <h3 class="card__element song__author">Slit</h3>
+                                    <span class="card__element song__title">Subtitle</span>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <figure class="card__element">
+                                        <img class="card__element song__img" src="./img/cure.jpeg" alt="album cover">
+                                        <div class="card__play-bg hover-show"></div>
+                                        <div class="card__play hover-show">
+                                            <i class="play__btn fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </figure>
+                                    <h3 class="card__element song__author">A cure for wellness</h3>
+                                    <span class="card__element song__title">Subtitle</span>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <figure class="card__element">
+                                        <img class="card__element song__img" src="./img/sinister.jpeg"
+                                            alt="album cover">
+                                        <div class="card__play-bg hover-show"></div>
+                                        <div class="card__play hover-show">
+                                            <i class="play__btn fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </figure>
+                                    <h3 class="card__element song__author">Sinister</h3>
+                                    <span class="card__element song__title">Subtitle</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end row -->
                     </div>
+                    <!-- end container -->
+                </section>
+                <!-- end recently played -->
 
-                    <div class="card">
-                        <img src="./style/img/stranger.jpeg" alt="" />
-                        <h3>Heavy Metal</h3>
-                        <h5>Subtitle</h5>
+                <!-- for you -->
+                <section class="main__cnt" id="for-you">
+                    <!-- grid container -->
+                    <div class="container">
+                        <h2 class="section__title">Creato per Te</h2>
+                        <h4 class="subtitle">Più ascolti, più saranno accurati i suggerimenti.</h4>
+                        <!-- grid row -->
+                        <div class="row">
+
+                            <div class="col">
+                                <div class="card">
+                                    <figure class="card__element">
+                                        <img class="card__element song__img" src="./img/radar.jpeg" alt="album cover">
+                                        <div class="card__play-bg hover-show"></div>
+                                        <div class="card__play hover-show">
+                                            <i class="play__btn fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </figure>
+                                    <h3 class="card__element song__author">Release Radar</h3>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <figure class="card__element">
+                                        <img class="card__element song__img" src="./img/mixdaily.jpeg"
+                                            alt="album cover">
+                                        <div class="card__play-bg hover-show"></div>
+                                        <div class="card__play hover-show">
+                                            <i class="play__btn fa-regular fa-circle-play"></i>
+                                        </div>
+                                    </figure>
+                                    <h3 class="card__element song__author">Daily Mix 1</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end row -->
                     </div>
-                </div>
+                    <!-- end container -->
+                </section>
+                <!-- end for you -->
+
+                <!-- popular -->
+                <section class="main__cnt" id="popular">
+                    <!-- grid container -->
+                    <div class="container">
+                        <h2 class="section__title">Artisti più popolari</h2>
+                        <h4 class="subtitle">Più ascolti, più saranno accurati i suggerimenti.</h4>
+                        <!-- grid row -->
+                        <div class="row">
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card__element img-round">
+                                        <figure class="card__element">
+                                            <img class="song__img" src="./img/youg.jpeg" alt="album cover">
+                                            <div class="card__play-bg hover-show"></div>
+                                            <div class="card__play hover-show">
+                                                <i class="play__btn fa-regular fa-circle-play"></i>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <h3 class="card__element song__author">Artista nome</h3>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card__element img-round">
+                                        <figure class="card__element">
+                                            <img class="song__img" src="./img/einaudi.jpeg" alt="album cover">
+                                            <div class="card__play-bg hover-show"></div>
+                                            <div class="card__play hover-show">
+                                                <i class="play__btn fa-regular fa-circle-play"></i>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <h3 class="card__element song__author">Artista nome</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end container -->
+                </section>
+                <!-- end popular -->
+
             </div>
+            <!-- END MAIN BODY -->
+
         </main>
-    </div>
+        <!-- END MAIN -->
 
-    <footer id="app-player"></footer>
+    </div>
+    <!-- end top part -->
+
+    <!-- FOOTER -->
+    <footer class="d-flex" id="app__footer">
+
+        <!-- FOOTER LEFT -->
+        <div class="footer__container d-flex" id="footer__song">
+            <div class="song__info d-flex">
+                <img class="song__img" src="./img/sinister.jpeg" alt="sinister cover">
+                <div class="song__details">
+                    <h3 class="song__author">Sinister</h3>
+                    <span class="song__title">Brano nome</span>
+                </div>
+            </div>
+            <div class="song__actions d-flex">
+                <a class="link" href="#">
+                    <i class="song__fovourites fa-regular fa-heart"></i>
+                </a>
+                <a href="#" class="link">
+                    <i class="song__folder fa-regular fa-folder"></i>
+                </a>
+
+            </div>
+        </div>
+        <!-- END FOOTER LEFT -->
+
+        <!-- FOOTER CENTER -->
+        <div class="footer__container" id="footer__player">
+            <div class="player__actions d-flex">
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="play-btn fa-regular fa-circle-play"></i>
+                <i class="fa-solid fa-forward-step"></i>
+                <i class="fa-solid fa-rotate-right"></i>
+            </div>
+            <div class="footer__pr-bar pr-bar d-flex">
+                <div class="listened-time">0:25</div>
+                <div class="pr-bar__bar">
+                    <div class="pr-bar__percentage-bar">
+                        <div class="pr-bar__progress-dot hover-show"></div>
+                    </div>
+                </div>
+                <div class="total-time">4:35</div>
+            </div>
+        </div>
+        <!-- END FOOTER CENTER -->
+
+        <!-- FOOTER RIGHT -->
+        <div class="footer__container d-flex" id="footer__actions">
+            <i class="actions__element fa-solid fa-list-ul"></i>
+            <i class="actions__element fa-solid fa-desktop"></i>
+            <i class="actions__element fa-solid fa-volume-high"></i>
+            <div class="actions__element actions__bar pr-bar">
+                <div class="pr-bar__bar">
+                    <div class="pr-bar__percentage-bar">
+                        <div class="pr-bar__progress-dot hover-show"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END FOOTER RIGHT -->
+
+    </footer>
+    <!-- END FOOTER -->
 </body>
 
 </html>
